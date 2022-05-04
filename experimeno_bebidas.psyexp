@@ -65,7 +65,7 @@
   <Routines>
     <Routine name="inicio_instruccion">
       <CodeComponent name="conexion">
-        <Param val="from psychopy import core, visual, event&amp;#10;from pylsl import StreamInfo, StreamOutlet&amp;#10;&amp;#10;info = StreamInfo(name='example_streme', type='Markers', channel_count=1,&amp;#10;                    channel_format='int32', source_id='example_stream_001')&amp;#10;outlet = StreamOutlet(info)&amp;#10;&amp;#10;markers = {&amp;#10;    'jugo': [1],&amp;#10;    'refresco': [2],&amp;#10;    'leche': [3],&amp;#10;    'energetica': [4],&amp;#10;    'alcoholica': [5],&amp;#10;    'jugo2': [6],&amp;#10;    'yogurt': [7],&amp;#10;    'cafe': [8],&amp;#10;    'malteada': [9],&amp;#10;    'agua': [11],&amp;#10;    'cocacola': [22],&amp;#10;    'hersheys': [33],&amp;#10;    'atole': [44],&amp;#10;    'valle': [66],&amp;#10;    'danone': [77],&amp;#10;    'michoacana': [88],&amp;#10;    'prueba': [98],&amp;#10;    'malteadafresa': [99],&amp;#10;}&amp;#10;&amp;#10;for _ in range(5):&amp;#10;    outlet.push_sample(markers['prueba'])&amp;#10;    print(&quot;marcador prueba&quot;)&amp;#10;    core.wait(0.5)&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="from psychopy import core, visual, event&amp;#10;from pylsl import StreamInfo, StreamOutlet&amp;#10;&amp;#10;info = StreamInfo(name='example_streme', type='Markers', channel_count=1,&amp;#10;                    channel_format='int32', source_id='example_stream_001')&amp;#10;outlet = StreamOutlet(info)&amp;#10;&amp;#10;markers = {&amp;#10;    'jugo': [1],&amp;#10;    'refresco': [2],&amp;#10;    'leche': [3],&amp;#10;    'energetica': [4],&amp;#10;    'alcoholica': [5],&amp;#10;    'otrojugo': [6],&amp;#10;    'yogurt': [7],&amp;#10;    'cafe': [8],&amp;#10;    'malteada': [9],&amp;#10;    'agua': [11],&amp;#10;    'coca': [12],&amp;#10;    'hersheys': [13],&amp;#10;    'atole': [14],&amp;#10;    'valle': [16],&amp;#10;    'danone': [17],&amp;#10;    'michoacana': [18],&amp;#10;    'fresamalt': [19],&amp;#10;    'prueba': [98],&amp;#10;}&amp;#10;&amp;#10;for _ in range(5):&amp;#10;    outlet.push_sample(markers['prueba'])&amp;#10;    print(&quot;marcador prueba&quot;)&amp;#10;    core.wait(0.5)&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="win.setColor('white')" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
@@ -127,12 +127,12 @@
     </Routine>
     <Routine name="mostrar_imagen">
       <CodeComponent name="primer_imagenes">
-        <Param val="path= r'C:\Users\Invitad@\Desktop\bebidas_azucaradas-master\bebidas'&amp;#10;path2= r'C:\Users\Invitad@\Desktop\bebidas_azucaradas-master\bebidas\bebidas_preguntas'&amp;#10;list_of_images = []&amp;#10;testcosaimg=[]&amp;#10;list_of_images2 = []&amp;#10;&amp;#10;for root, dirs, files in os.walk(path):&amp;#10;    for file in files:&amp;#10;        list_of_images.append(os.path.join(root,file))&amp;#10;shuffle(list_of_images)&amp;#10;&amp;#10;for root, dirs, files in os.walk(path):&amp;#10;    for file in files:&amp;#10;        testcosaimg.append(os.path.join(root,file))&amp;#10;shuffle(testcosaimg)&amp;#10;list_of_images.extend(testcosaimg)&amp;#10;testcosaimg=[]&amp;#10;&amp;#10;for root, dirs, files in os.walk(path):&amp;#10;    for file in files:&amp;#10;        testcosaimg.append(os.path.join(root,file))&amp;#10;shuffle(testcosaimg)&amp;#10;list_of_images.extend(testcosaimg)&amp;#10;&amp;#10;for root, dirs, files in os.walk(path2):&amp;#10;    for file in files:&amp;#10;        list_of_images2.append(os.path.join(root,file))&amp;#10;&amp;#10;#shuffle(list_of_images)&amp;#10;veces_rep=len(list_of_images)&amp;#10;veces_rep2=len(list_of_images2)" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="path= r'C:\Users\Invitad@\Desktop\bebidas_azucaradas-master\bebidas'&amp;#10;path2= r'C:\Users\Invitad@\Desktop\bebidas_azucaradas-master\bebidas_preguntas'&amp;#10;list_of_images = []&amp;#10;list_of_images2 = []&amp;#10;&amp;#10;for root, dirs, files in os.walk(path):&amp;#10;    for file in files:&amp;#10;        list_of_images.append(os.path.join(root,file))&amp;#10;&amp;#10;for root, dirs, files in os.walk(path2):&amp;#10;    for file in files:&amp;#10;        list_of_images2.append(os.path.join(root,file))&amp;#10;&amp;#10;veces_rep=len(list_of_images)&amp;#10;veces_rep2=len(list_of_images2)" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="img_num = 0&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="imgg = list_of_images[img_num]&amp;#10;img_num+=1&amp;#10;if &quot;1.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['jugo'])&amp;#10;    print(&quot;encontrado&quot;)&amp;#10;if &quot;2.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['refresco'])&amp;#10;    print(&quot;encontrado&quot;)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="imgg = list_of_images[img_num]&amp;#10;img_num+=1&amp;#10;if &quot;1.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['jugo'])&amp;#10;if &quot;2.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['refresco'])&amp;#10;if &quot;3.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['leche'])&amp;#10;if &quot;4.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['energetica'])&amp;#10;if &quot;5.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['alcoholica'])&amp;#10;if &quot;6.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['otrojugo'])&amp;#10;if &quot;7.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['yogurt'])&amp;#10;if &quot;8.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['cafe'])&amp;#10;if &quot;9.-&quot; in imgg:&amp;#10;    outlet.push_sample(markers['malteada'])&amp;#10;if &quot;11.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['agua'])&amp;#10;if &quot;22.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['coca'])&amp;#10;if &quot;33.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['hersheys'])&amp;#10;if &quot;44.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['atole'])&amp;#10;if &quot;66.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['valle'])&amp;#10;if &quot;77.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['danone'])&amp;#10;if &quot;88.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['michoacana'])&amp;#10;if &quot;99.+&quot; in imgg:&amp;#10;    outlet.push_sample(markers['fresamalt'])" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -143,51 +143,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="primer_imagenes" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <PolygonComponent name="cruz">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="black" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="black" valType="color" updates="constant" name="lineColor"/>
-        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="cruz" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="cross" valType="str" updates="None" name="shape"/>
-        <Param val="(0.1, 0.1)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-      <KeyboardComponent name="b_siguiente">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="b_siguiente" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
       <ImageComponent name="imagen">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
@@ -208,13 +163,40 @@
         <Param val="(0.5, 0.5)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="2.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
+      <PolygonComponent name="cruz">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="white" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="white" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="cruz" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="triangle" valType="str" updates="None" name="shape"/>
+        <Param val="(0.5, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
     </Routine>
     <Routine name="respuesta_imagen1">
       <CodeComponent name="resp_imagen">

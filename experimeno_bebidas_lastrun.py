@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.1.1),
-    on abril 30, 2022, at 19:23
+    on mayo 03, 2022, at 20:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,19 +40,19 @@ markers = {
     'leche': [3],
     'energetica': [4],
     'alcoholica': [5],
-    'jugo2': [6],
+    'otrojugo': [6],
     'yogurt': [7],
     'cafe': [8],
     'malteada': [9],
     'agua': [11],
-    'cocacola': [22],
-    'hersheys': [33],
-    'atole': [44],
-    'valle': [66],
-    'danone': [77],
-    'michoacana': [88],
+    'coca': [12],
+    'hersheys': [13],
+    'atole': [14],
+    'valle': [16],
+    'danone': [17],
+    'michoacana': [18],
+    'fresamalt': [19],
     'prueba': [98],
-    'malteadafresa': [99],
 }
 
 for _ in range(5):
@@ -63,32 +63,16 @@ for _ in range(5):
 path= r'C:\Users\Invitad@\Desktop\bebidas_azucaradas-master\bebidas'
 path2= r'C:\Users\Invitad@\Desktop\bebidas_azucaradas-master\bebidas\bebidas_preguntas'
 list_of_images = []
-testcosaimg=[]
 list_of_images2 = []
 
 for root, dirs, files in os.walk(path):
     for file in files:
         list_of_images.append(os.path.join(root,file))
-shuffle(list_of_images)
-
-for root, dirs, files in os.walk(path):
-    for file in files:
-        testcosaimg.append(os.path.join(root,file))
-shuffle(testcosaimg)
-list_of_images.extend(testcosaimg)
-testcosaimg=[]
-
-for root, dirs, files in os.walk(path):
-    for file in files:
-        testcosaimg.append(os.path.join(root,file))
-shuffle(testcosaimg)
-list_of_images.extend(testcosaimg)
 
 for root, dirs, files in os.walk(path2):
     for file in files:
         list_of_images2.append(os.path.join(root,file))
 
-#shuffle(list_of_images)
 veces_rep=len(list_of_images)
 veces_rep2=len(list_of_images2)
 
@@ -170,13 +154,6 @@ mostrar_imagenClock = core.Clock()
 img_num = 0
 
 
-cruz = visual.ShapeStim(
-    win=win, name='cruz', vertices='cross',
-    size=(0.1, 0.1),
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=None, depth=-1.0, interpolate=True)
-b_siguiente = keyboard.Keyboard()
 imagen = visual.ImageStim(
     win=win,
     name='imagen', 
@@ -184,7 +161,13 @@ imagen = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-1.0)
+cruz = visual.ShapeStim(
+    win=win, name='cruz',
+    size=(0.5, 0.5), vertices='triangle',
+    ori=0.0, pos=(0, 0), anchor='center',
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
 
 # Initialize components for Routine "Instrucciones_2"
 Instrucciones_2Clock = core.Clock()
@@ -548,17 +531,47 @@ for thisImgse in imgse:
     
     # ------Prepare to start Routine "mostrar_imagen"-------
     continueRoutine = True
+    routineTimer.add(2.000000)
     # update component parameters for each repeat
     imgg = list_of_images[img_num]
     img_num+=1
     if "1.-" in imgg:
-        print("encontrado")
-    b_siguiente.keys = []
-    b_siguiente.rt = []
-    _b_siguiente_allKeys = []
+        outlet.push_sample(markers['jugo'])
+    if "2.-" in imgg:
+        outlet.push_sample(markers['refresco'])
+    if "3.-" in imgg:
+        outlet.push_sample(markers['leche'])
+    if "4.-" in imgg:
+        outlet.push_sample(markers['energetica'])
+    if "5.-" in imgg:
+        outlet.push_sample(markers['alcoholica'])
+    if "6.-" in imgg:
+        outlet.push_sample(markers['otrojugo'])
+    if "7.-" in imgg:
+        outlet.push_sample(markers['yogurt'])
+    if "8.-" in imgg:
+        outlet.push_sample(markers['cafe'])
+    if "9.-" in imgg:
+        outlet.push_sample(markers['malteada'])
+    if "11.+" in imgg:
+        outlet.push_sample(markers['agua'])
+    if "22.+" in imgg:
+        outlet.push_sample(markers['coca'])
+    if "33.+" in imgg:
+        outlet.push_sample(markers['hersheys'])
+    if "44.+" in imgg:
+        outlet.push_sample(markers['atole'])
+    if "66.+" in imgg:
+        outlet.push_sample(markers['valle'])
+    if "77.+" in imgg:
+        outlet.push_sample(markers['danone'])
+    if "88.+" in imgg:
+        outlet.push_sample(markers['michoacana'])
+    if "99.+" in imgg:
+        outlet.push_sample(markers['fresamalt'])
     imagen.setImage(imgg)
     # keep track of which components have finished
-    mostrar_imagenComponents = [cruz, b_siguiente, imagen]
+    mostrar_imagenComponents = [imagen, cruz]
     for thisComponent in mostrar_imagenComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -573,7 +586,7 @@ for thisImgse in imgse:
     frameN = -1
     
     # -------Run Routine "mostrar_imagen"-------
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = mostrar_imagenClock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=mostrar_imagenClock)
@@ -581,39 +594,8 @@ for thisImgse in imgse:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *cruz* updates
-        if cruz.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            cruz.frameNStart = frameN  # exact frame index
-            cruz.tStart = t  # local t and not account for scr refresh
-            cruz.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(cruz, 'tStartRefresh')  # time at next scr refresh
-            cruz.setAutoDraw(True)
-        
-        # *b_siguiente* updates
-        waitOnFlip = False
-        if b_siguiente.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            b_siguiente.frameNStart = frameN  # exact frame index
-            b_siguiente.tStart = t  # local t and not account for scr refresh
-            b_siguiente.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(b_siguiente, 'tStartRefresh')  # time at next scr refresh
-            b_siguiente.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(b_siguiente.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(b_siguiente.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if b_siguiente.status == STARTED and not waitOnFlip:
-            theseKeys = b_siguiente.getKeys(keyList=['space'], waitRelease=False)
-            _b_siguiente_allKeys.extend(theseKeys)
-            if len(_b_siguiente_allKeys):
-                b_siguiente.keys = _b_siguiente_allKeys[-1].name  # just the last key pressed
-                b_siguiente.rt = _b_siguiente_allKeys[-1].rt
-                # a response ends the routine
-                continueRoutine = False
-        
         # *imagen* updates
-        if imagen.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        if imagen.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             imagen.frameNStart = frameN  # exact frame index
             imagen.tStart = t  # local t and not account for scr refresh
@@ -622,12 +604,29 @@ for thisImgse in imgse:
             imagen.setAutoDraw(True)
         if imagen.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > imagen.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > imagen.tStartRefresh + 1-frameTolerance:
                 # keep track of stop time/frame for later
                 imagen.tStop = t  # not accounting for scr refresh
                 imagen.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(imagen, 'tStopRefresh')  # time at next scr refresh
                 imagen.setAutoDraw(False)
+        
+        # *cruz* updates
+        if cruz.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            cruz.frameNStart = frameN  # exact frame index
+            cruz.tStart = t  # local t and not account for scr refresh
+            cruz.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(cruz, 'tStartRefresh')  # time at next scr refresh
+            cruz.setAutoDraw(True)
+        if cruz.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > cruz.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                cruz.tStop = t  # not accounting for scr refresh
+                cruz.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(cruz, 'tStopRefresh')  # time at next scr refresh
+                cruz.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -650,20 +649,10 @@ for thisImgse in imgse:
     for thisComponent in mostrar_imagenComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    imgse.addData('cruz.started', cruz.tStartRefresh)
-    imgse.addData('cruz.stopped', cruz.tStopRefresh)
-    # check responses
-    if b_siguiente.keys in ['', [], None]:  # No response was made
-        b_siguiente.keys = None
-    imgse.addData('b_siguiente.keys',b_siguiente.keys)
-    if b_siguiente.keys != None:  # we had a response
-        imgse.addData('b_siguiente.rt', b_siguiente.rt)
-    imgse.addData('b_siguiente.started', b_siguiente.tStartRefresh)
-    imgse.addData('b_siguiente.stopped', b_siguiente.tStopRefresh)
     imgse.addData('imagen.started', imagen.tStartRefresh)
     imgse.addData('imagen.stopped', imagen.tStopRefresh)
-    # the Routine "mostrar_imagen" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    imgse.addData('cruz.started', cruz.tStartRefresh)
+    imgse.addData('cruz.stopped', cruz.tStopRefresh)
 # completed veces_rep repeats of 'imgse'
 
 
