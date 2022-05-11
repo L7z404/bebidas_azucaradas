@@ -199,6 +199,23 @@
       </PolygonComponent>
     </Routine>
     <Routine name="respuesta_imagen1">
+      <CodeComponent name="code">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="leftButton.time = 0;&amp;#10;rightButton.time = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="tr1.time = 0&amp;#10;tr2.time = 0&amp;#10;tr3.time = 0&amp;#10;tr4.time = 0&amp;#10;tr5.time = 0&amp;#10;tr6.time = 0&amp;#10;tr7.time = 0&amp;#10;tr8.time = 0&amp;#10;tr9.time = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="tr1.time = t&amp;#10;tr2.time = t&amp;#10;tr3.time = t&amp;#10;tr4.time = t&amp;#10;tr5.time = t&amp;#10;tr6.time = t&amp;#10;tr7.time = t&amp;#10;tr8.time = t&amp;#10;tr9.time = t&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if len(mouse.clicked_name):&amp;#10;    thisExp.addData(&quot;clickedButtonName&quot;, mouse.clicked_name[-1])&amp;#10;    thisExp.addData(&quot;clickedButtonTime&quot;, mouse.clicked_time[-1])&amp;#10;    thisExp.nextEntry()&amp;#10;else:&amp;#10;    thisExp.addData(&quot;clickedButtonName&quot;, None)&amp;#10;    thisExp.addData(&quot;clickedButtonTime&quot;, None)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <CodeComponent name="resp_imagen">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -547,9 +564,9 @@
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
         <Param val="mouse" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="final" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="name," valType="list" updates="constant" name="saveParamsClickable"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="on valid click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name, time" valType="list" updates="constant" name="saveParamsClickable"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="4" valType="code" updates="None" name="startVal"/>
@@ -560,6 +577,23 @@
       </MouseComponent>
     </Routine>
     <Routine name="respuesta_imagen2">
+      <CodeComponent name="code_2">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="leftButton.time = 0;&amp;#10;rightButton.time = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="td1.time = 0&amp;#10;td2.time = 0&amp;#10;td3.time = 0&amp;#10;td4.time = 0&amp;#10;td5.time = 0&amp;#10;td6.time = 0&amp;#10;td7.time = 0&amp;#10;td8.time = 0&amp;#10;td9.time = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="td1.time = t&amp;#10;td2.time = t&amp;#10;td3.time = t&amp;#10;td4.time = t&amp;#10;td5.time = t&amp;#10;td6.time = t&amp;#10;td7.time = t&amp;#10;td8.time = t&amp;#10;td9.time = t&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if len(mouse_2.clicked_name):&amp;#10;    thisExp.addData(&quot;clickedButtonName&quot;, mouse_2.clicked_name[-1])&amp;#10;    thisExp.addData(&quot;clickedButtonTime&quot;, mouse_2.clicked_time[-1])&amp;#10;    thisExp.nextEntry()&amp;#10;else:&amp;#10;    thisExp.addData(&quot;clickedButtonName&quot;, None)&amp;#10;    thisExp.addData(&quot;clickedButtonTime&quot;, None)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <ImageComponent name="image_dependiente_independiente">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
@@ -837,8 +871,8 @@
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
         <Param val="mouse_2" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="final" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="name," valType="list" updates="constant" name="saveParamsClickable"/>
+        <Param val="on valid click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name, time" valType="list" updates="constant" name="saveParamsClickable"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -850,6 +884,23 @@
       </MouseComponent>
     </Routine>
     <Routine name="respuesta_imagen3">
+      <CodeComponent name="code_3">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="leftButton.time = 0;&amp;#10;rightButton.time = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="ta1.time = 0&amp;#10;ta2.time = 0&amp;#10;ta3.time = 0&amp;#10;ta4.time = 0&amp;#10;ta5.time = 0&amp;#10;ta6.time = 0&amp;#10;ta7.time = 0&amp;#10;ta8.time = 0&amp;#10;ta9.time = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="ta1.time = t&amp;#10;ta2.time = t&amp;#10;ta3.time = t&amp;#10;ta4.time = t&amp;#10;ta5.time = t&amp;#10;ta6.time = t&amp;#10;ta7.time = t&amp;#10;ta8.time = t&amp;#10;ta9.time = t&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if len(mouse_3.clicked_name):&amp;#10;    thisExp.addData(&quot;clickedButtonName&quot;, mouse_3.clicked_name[-1])&amp;#10;    thisExp.addData(&quot;clickedButtonTime&quot;, mouse_3.clicked_time[-1])&amp;#10;    thisExp.nextEntry()&amp;#10;else:&amp;#10;    thisExp.addData(&quot;clickedButtonName&quot;, None)&amp;#10;    thisExp.addData(&quot;clickedButtonTime&quot;, None)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_3" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <ImageComponent name="image_tranquilo_activo">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
@@ -1127,8 +1178,8 @@
         <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
         <Param val="mouse_3" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="final" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="name," valType="list" updates="constant" name="saveParamsClickable"/>
+        <Param val="on valid click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name, time" valType="list" updates="constant" name="saveParamsClickable"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
